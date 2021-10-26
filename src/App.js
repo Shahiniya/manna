@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Menu from './Menu'
+// import {ReactComponent as logo192} from './icons/logo192.svg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const sidebar=[
+  {
+    id: 1,
+    // icon: ,
+    title: 'Main'
 
-export default App;
+  },
+  {
+    id: 2,
+    icon: personalbar,
+    title: 'About'
+
+  },
+  {
+    id: 3,
+    icon: personalbar,
+    title: 'Setting'
+
+  },
+  {
+    id: 4,
+    icon: personalbar,
+    title: 'Contact'
+
+  },
+  {
+    id: 5,
+    icon: personalbar,
+    title: 'Test'
+
+  },
+  
+]
+export default class App extends Component {
+  render() {
+    return ( <div>
+       {
+         sidebar.map(({id,icon,title}) => (
+         <Menu key={id} Icon ={icon} title={title} />
+         ))}
+       </div>);
+  }
+};
+       
+       
+       
+      // <Menu icon='' title='Main'/> 
+      //  <Menu icon='' title='About'/>
+      //  <Menu icon='' title='Setting'/>
+      //  <Menu icon='' title='Contsct'/>
+      //  <Menu icon='' title='Test'/> 
+      
+        

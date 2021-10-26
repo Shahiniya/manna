@@ -1,0 +1,23 @@
+.container{
+    width:300px;
+    display: flex;
+    margin:10px;
+    background-color: coral;
+    border-radius: 8px;
+    color: white;
+    padding-left: 20px;
+    align-items: center;
+
+}
+
+.icon{
+    display:flex;
+    width: 30px;
+    margin-right: 20px;
+}
+
+.title{ 
+    display:flex;
+    font-size:22px;
+
+}
